@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block body %}
+<form action="" method="post" class="edit_test_form">
+    <h1>Edit Test Form</h1>
+    <label for="test_id">Test ID</label>
+    <input type="text" name="test_id" id="test_id">
+    <label for="teacher_id">Teacher ID</label>
+    <input type="text" name="teacher_id" id="teacher_id">
+    <label for="question_1" >Question 1</label>
+    <input type="text" name="question_1" id="question_1">
+    <label for="question_2" >Question 2</label>
+    <input type="text" name="question_2" id="question_2">
+    <label for="question_3" >Question 3</label>
+    <input type="text" name="question_3" id="question_3">
+    <label for="question_4" >Question 4</label>
+    <input type="text" name="question_4" id="question_4">
+    <button type="submit" name="edit_button">Edit Test </button>
+</form>
+<h1>{{edited}}</h1>
+{% endblock %}

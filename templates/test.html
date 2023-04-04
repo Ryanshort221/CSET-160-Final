@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block body%}
+<div class="form">
+    {% for test in tests %}
+<form method="post" action="/takeTest" class="select_test_form">
+    <label for="test_id">Test ID:</label>
+    <input readonly id="test_id" type="text" name="test_id" value="{{test[0]}}">
+    <label for="test_creator">Test Creator:</label>
+    <input readonly type="text" name="test_creator" id="test_creator" value="{{test[1]}}">
+    <label for="question_1">Question 1:</label>
+    <input readonly type="text" name="question_1" id="question_1" value="{{test[2]}}">
+    <label for="question_2">Question 2:</label>
+    <input readonly type="text" name="question_2" id="question_2" value="{{test[3]}}">
+    <label for="question_3">Question 3:</label>
+    <input readonly type="text" name="question_3" id="question_3" value="{{test[4]}}">
+    <label for="question_4">Question 4:</label>
+    <input readonly type="text" name="question_4" id='question_4' value="{{test[5]}}">
+    <button class="take_test_btn" type="submit">Take Test</button>
+</form>
+    {% endfor %}
+</div>
+
+{% endblock%}

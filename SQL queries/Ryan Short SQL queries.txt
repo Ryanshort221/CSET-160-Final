@@ -1,0 +1,39 @@
+create database schoolTest;
+use schoolTest;
+create table student (
+	student_id int unique not null primary key,
+    name varchar(255) not null,
+    grade int not null
+);
+
+create table teacher (
+	teacher_id int unique not null primary key,
+    name varchar(255) not null,
+    grade int not null
+);
+
+create table test (
+	test_id int unique not null primary key,
+    teacher_id int not null,
+    question_1 varchar(255) not null,
+	question_2 varchar(255) not null,
+    question_3 varchar(255) not null,
+    question_4 varchar(255) not null,
+	foreign key (teacher_id) references teacher(teacher_id)
+);
+
+create table student_submissions(
+	test_id int not null,
+    student_id int not null,
+    answer_1 varchar(255) default null,
+	answer_2 varchar(255) default null,
+	answer_3 varchar(255) default null,
+	answer_4 varchar(255) default null,
+    foreign key (test_id) references test(test_id),
+    foreign key (student_id) references student(student_id)
+);
+
+select * from student;
+select * from teacher;
+select * from test;
+select * from student_submissions;

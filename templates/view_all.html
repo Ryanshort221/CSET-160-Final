@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block body%}
+<div class="view_all_container">
+    <form class="view_all_form" action="" method="post">
+        <button type="submit" name="button" value="Students" class="btn">Students</button>
+        <button type="submit" name="button" value="Teachers" class="btn">Teachers</button>
+        <button type="submit" name="button" value="All" class="btn">All</button>
+    </form>
+{% if students %}
+    {% for student in students %}
+        <ul class="list">
+            <li class="list-item">Student ID: {{student[0]}}</li>
+            <li class="list-item">Name: {{student[1]}}</li>
+            <li class="list-item">Grade: {{student[2]}}</li>
+        </ul>
+    {% endfor %}
+{% endif %}
+{% if teachers %}
+    {% for teacher in teachers %}
+        <ul class="list">
+            <li class="list-item">Teacher ID: {{teacher[0]}}</li>
+            <li class="list-item">Name: {{teacher[1]}}</li>
+            <li class="list-item">Grade: {{teacher[2]}}</li>
+        </ul>
+    {% endfor %}
+{% endif %}
+</div>
+
+{% endblock%}

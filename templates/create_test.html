@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block body%}
+<div class="create_test_container">
+    <form action="/createTest" method="post" class="create_test_form">
+        <h1>Create a Test</h1>
+        <label for="test_id">Test ID</label>
+        <input readonly type="text" id="test_id" name="test_id" placeholder="Enter test ID" value="{{next_test_id}}">
+        <label for="teacher_id">Teacher ID</label>
+        <input type="text" id="teacher_id" name="teacher_id" placeholder="Enter teacher ID ">
+        <label for="question1">Enter 1st Question</label>
+        <input type="text" id="question1" name="question1" placeholder="Enter Question #1">
+        <label for="question2">Enter 2nd Question</label>
+        <input type="text" id="question2" name="question2" placeholder="Enter Question #2">
+        <label for="question3">Enter 3rd Question</label>
+        <input type="text" id="question3" name="question3" placeholder="Enter Question #3">
+        <label for="question4">Enter 4th Question</label>
+        <input type="text" id="question4" name="question4" placeholder="Enter Question #4">
+        <button type="submit">Create Test</button>
+    </form>
+    {{created}}
+</div>
+
+{% endblock%}

@@ -1,0 +1,16 @@
+ {% extends "base.html" %}
+ {% block body%}
+      <div class="">
+       <form action="/teachersignup" method="post" class="sign_up_form_teacher">
+            <h1>New Teacher Sign up!</h1>
+            <label for="teacher_id">Teacher ID</label>
+            <input readonly type="text" id="teacher_id" name="teacher_id" placeholder="Enter your teacher id #" value="{{next_teacher_id}}">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name">
+            <label for="grade">Grade</label>
+            <input type="text" id="grade" name="grade" placeholder="Enter your current grade">
+            <button type="submit">Sign up</button>
+        </form>
+        {{created}}
+       </div>
+{% endblock%}

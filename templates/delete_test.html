@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block body %}
+<form action="" method="post" class="delete_test_form">
+    <h1>Delete Test Form</h1>
+    <label for="test_id">Test ID</label>
+    <input type="text" name="test_id" id="test_id">
+    <button type="submit" name="button">Delete Test</button>
+</form>
+<h1>{{deleted}}</h1>
+{% endblock %}
